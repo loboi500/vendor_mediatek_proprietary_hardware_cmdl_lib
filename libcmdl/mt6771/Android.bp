@@ -1,0 +1,33 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            shared_libs: [
+                "liblog",
+            ],
+            srcs: [
+                "arm/libcmdl.so",
+            ],
+        },
+        arm64: {
+            shared_libs: [
+                "liblog",
+            ],
+            srcs: [
+                "arm64/libcmdl.so",
+            ],
+        },
+    },
+    export_include_dirs: [
+        "include",
+    ],
+    mtk_brm_platform: "mt6771",
+    mtk_src_path: "vendor/mediatek/proprietary/hardware/cmdl",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libcmdl",
+    owner: "mtk",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+}
+

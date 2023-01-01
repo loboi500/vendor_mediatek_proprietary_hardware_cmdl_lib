@@ -1,0 +1,53 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            cortex_a55: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a55/libcmdl.so",
+                ],
+            },
+            cortex_a75: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a75/libcmdl.so",
+                ],
+            },
+        },
+        arm64: {
+            cortex_a55: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-2a_cortex-a55/libcmdl.so",
+                ],
+            },
+            cortex_a75: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-a-branchprot_cortex-a75/libcmdl.so",
+                ],
+            },
+        },
+    },
+    export_include_dirs: [
+        "include",
+    ],
+    mtk_brm_platform: "common",
+    mtk_src_path: "vendor/mediatek/proprietary/hardware/cmdl",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libcmdl",
+    owner: "mtk",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+}
+
